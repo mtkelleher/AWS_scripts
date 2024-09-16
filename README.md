@@ -53,7 +53,7 @@ Ensure you have the necessary permissions for SSH access to SOCA, S3 access, and
 #### Installation:
 1. Clone this repository:
 
-       git clone [https://github.com/yourusername/aws-scripts.git](https://github.com/mtkelleher/AWS_scripts)
+       git clone https://github.com/mtkelleher/AWS_scripts.git
 
 2. Make the scripts executable:
 
