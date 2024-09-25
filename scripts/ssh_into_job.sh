@@ -10,7 +10,7 @@ read input
 input="${input}.ip-head-node"
 
 # Retrieve the compute node's IP address and SSH into it
-output=$(qstat -f "$input" | grep exec_host | awk '{print $3}' | sed 's/.*ip\.//' | cut -d'/' -f1)
+output=$(qstat -f "$input" | grep exec_host | awk '{print $3}' | cut -d'/' -f1)
 
 echo "Connecting via SSH to $output..."
 
