@@ -1,6 +1,17 @@
 # AWS scripts repository
 This repository contains useful scripts to help automate common tasks when working with AWS services. Below is an overview of the scripts included and instructions for their usage.
 
+## Helpful Aliases
+### 1. .zprofile (local)
+
+
+### 2. .bashrc (SOCA)
+Mount S3 to an EFS directory from an EC2 instance this can be used once [`update_aws_creds.sh`](./scripts/update_aws_creds.sh) has been run.
+`alias mounts3="mount-s3 ddpsc-baxterlab /shares/baxter/users/mkelleher/s3"`
+
+Get qstat info for your username. This is helpful when there are many jobs that have been started from the head node.
+`alias qstatme="qstat | head -n 2; qstat | grep $(whoami)"`
+
 ## Scripts
 ### 1. update_aws_creds.sh
 Purpose:
