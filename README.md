@@ -6,9 +6,9 @@ This repository contains useful scripts to help automate common tasks when worki
 
 
 ### 2. .bashrc (SOCA)
-Mount S3 to an EFS directory from an EC2 instance. This can be used once [`update_aws_creds.sh`](./scripts/update_aws_creds.sh) has been run.
+Mount S3 to an EFS directory from an EC2 instance. This can be used once [`update_aws_creds.sh`](./scripts/update_aws_creds.sh) has been run. It is also useful to mount to an empty directory. I recommend first creating the directory ~/s3, which can be accomplished by running `mkdir ~/s3`.
 
-`alias mounts3="mount-s3 ddpsc-baxterlab /shares/baxter/users/mkelleher/s3"`
+`alias mounts3="mount-s3 ddpsc-baxterlab ~/s3"`
 
 Get qstat info for your username. This is helpful when there are many jobs that have been started from the head node.
 
@@ -37,7 +37,7 @@ Script:
 
 ### 2. ssh_into_job.sh
 Purpose:
-This script is used for SSHing into a running EC2 instance (job) from an interactive session on the head node. The IP of the instance is retrieved based on the job ID from `qstat` (formatted as `jobidnum.ip-*`), which is then used to establish the SSH connection.
+This script is used for SSHing into a running EC2 instance (job) from an interactive session on the head node. The IP of the instance is retrieved based on the job ID from `qstat` (formatted as `jobidnum.ip-*`), which is then used to establish the SSH connection. It is a quick way to access a running job, where you can interactively use tools like htop to check memory and CPU usage.
 
 
 Note: In line 10 of [`ssh_into_job.sh`](./scripts/ssh_into_job.sh) you must replace `ip-head-node` with your head node's ip! You can also view job details in SOCA via your web browser.
