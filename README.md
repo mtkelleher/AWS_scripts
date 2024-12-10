@@ -2,7 +2,7 @@
 This repository contains useful scripts to help automate common tasks when working with AWS services. Below is an overview of the scripts included and instructions for their usage.
 
 ## Helpful Aliases
-### 1. .zprofile (local)
+### 1. .zshrc (local)
 
 
 ### 2. .bashrc (SOCA)
